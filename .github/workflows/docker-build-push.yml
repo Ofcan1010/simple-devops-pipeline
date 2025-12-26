@@ -18,12 +18,13 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Build and push image
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          push: true
-          tags: ofcan1010/simple-devops-pipeline:latest
+      - name: Build Docker image
+        run: |
+          docker build -t ofcan1010/simple-devops-pipeline:latest .
+
+      - name: Push Docker image
+        run: |
+          docker push ofcan1010/simple-devops-pipeline:latest
 
       - name: Deploy with Docker Compose
         run: |
