@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  web:
+    image: ofcan1010/simple-devops-pipeline:latest
+    container_name: simple-devops-web
+    ports:
+      - "8080:80"
+    restart: always
