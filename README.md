@@ -14,4 +14,4 @@
      - Docker Hub’a gönderilir
      - Docker Compose ile otomatik olarak deploy edilir
 
-Yapılan değişiklikler http://localhost:8080/ adresinden anlık olarak takip edilmiştir.
+Yapılan değişiklikler http://localhost:8080/ adresinden anlık olarak takip edildi.
